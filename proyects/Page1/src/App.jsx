@@ -1,8 +1,17 @@
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import Hero from './components/Hero.jsx'
+
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, });
+  }, []);
+
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-blue-600">¡Hola Tailwind + React!</h1>
-    </div>
+    <main className='bg-[#0d182e]'>
+      <Hero />
+    </main>
   );
 }
 
